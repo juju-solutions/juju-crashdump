@@ -80,8 +80,8 @@ DIRECTORIES = [
 
 SSH_PARM = " -o StrictHostKeyChecking=no"
 
-SSH_CMD = "ssh" + SSH_PARM
-SCP_CMD = "scp" + SSH_PARM
+SSH_CMD = "timeout -v 5m ssh" + SSH_PARM
+SCP_CMD = "timeout -v 5m scp" + SSH_PARM
 
 
 def retrieve_single_unit_tarball(tuple_input):
